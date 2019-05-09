@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Extrude polygons for 3D indoor mapping</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- Bootstrap core CSS -->
+    <link href="src/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link href="src/main.css" rel="stylesheet">
+
+    <link href="src/am.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 8.3vh;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Mapa Univali </div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-light">Salas</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Locais Públicos</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Banheiros</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Blocos</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Filtro</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Filtro</a>
+                <div id="nightday">
+                    <div class="toggleWrapper">
+                        <input type="checkbox" class="dn" id="dn" />
+                        <label for="dn" class="toggle" onclick="darkness()">
+                            <span class="toggle__handler">
+                                <span class="crater crater--1"></span>
+                                <span class="crater crater--2"></span>
+                                <span class="crater crater--3"></span>
+                            </span>
+                            <span class="star star--1"></span>
+                            <span class="star star--2"></span>
+                            <span class="star star--3"></span>
+                            <span class="star star--4"></span>
+                            <span class="star star--5"></span>
+                            <span class="star star--6"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav id="navbar" class="navbar navbar-expand-lg navbar-light  border-bottom">
+
+                <div class="menuDiv">
+                    <button class="btn btn-primary" onclick="darkness()" id="menu-toggle"><i
+                            class="fas fa-bars"></i></button>
+                    <img src="src/img/univalilogo.png" class="univali">
+                </div>
+
+
+            </nav>
+
+            <div class="container-fluid" style="padding-left:0px;">
+                <div class="whitemap" id='map'></div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZGNhdWViNzgiLCJhIjoiY2p0MHgxemw2MGQ2ZTQ0cDl1c2Uzc3I5ayJ9.GXAUYDZt-B281Jle5BG-1Q';
+        // mapboxgl.accessToken = 'pk.eyJ1IjoiZGNhdWViNzgiLCJhIjoiY2p0MHgxemw2MGQ2ZTQ0cDl1c2Uzc3I5ayJ9.GXAUYDZt-B281Jle5BG-1Q'; versão dark
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/dcaueb78/cjt0xceht0e7m1fl2xz9qiuo3',
+            // style: 'mapbox://styles/dcaueb78/cjv8pxgec06ol1fqv835ao7ck', versão dark
+
+            center: [-48.665681, -26.917887],
+            zoom: 16.3
+        });
+
+        map.on('load', function () {
+            map.addLayer({
+                'id': 'room-extrusion',
+                'type': 'fill-extrusion',
+                'source': {
+                    // GeoJSON Data source used in vector tiles, documented at
+                    // https://gist.github.com/ryanbaumann/a7d970386ce59d11c16278b90dde094d
+                    'type': 'geojson',
+                    'data': 'https://docs.mapbox.com/mapbox-gl-js/assets/indoor-3d-map.geojson'
+                    // 'data': 'http://localhost/mapaUnivali/indoor-3d-map_teste.geojson'
+                },
+                'paint': {
+                    // See the Mapbox Style Specification for details on data expressions.
+                    // https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions
+
+                    // Get the fill-extrusion-color from the source 'color' property.
+                    'fill-extrusion-color': ['get', 'color'],
+
+                    // Get fill-extrusion-height from the source 'height' property.
+                    'fill-extrusion-height': ['get', 'height'],
+
+                    // Get fill-extrusion-base from the source 'base_height' property.
+                    'fill-extrusion-base': ['get', 'base_height'],
+
+                    // Make extrusions slightly opaque for see through indoor walls.
+                    'fill-extrusion-opacity': 0.5
+                }
+            });
+            map.addSource('some id', {
+                type: 'geojson',
+                data: {
+                    "type": "FeatureCollection",
+                    "features": [{
+                        "type": "Feature",
+                        "properties": { "name": "Null Island" },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -48.665531,
+                                -26.918245
+                            ]
+                        }
+                    }]
+                }
+            });
+        });
+
+    </script>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="src/jquery/jquery.js"></script>
+    <script src="src/bootstrap/js/bootstrap.bundle.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <script src="src/main.js"></script>
+</body>
+
+</html>
