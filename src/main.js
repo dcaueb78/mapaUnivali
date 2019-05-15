@@ -8,10 +8,13 @@ function darkness() {
 }
 
 var elemento = document.createElement('div')
-elemento.className = 'marker';
+elemento.className = 'marker-rounded';
+var popup = new mapboxgl.Popup({ offset: 25 })
+    .setText('Biblioteca Univali.');
 
 var marker = new mapboxgl.Marker(elemento)
-    .setLngLat([-48.665681, -26.917887])
+    .setLngLat([-48.6628,-26.9147])
+    .setPopup(popup) // sets a popup on this marker
     .addTo(map)
 
 // var nav = new mapboxgl.NavigationControl();

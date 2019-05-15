@@ -38,12 +38,15 @@
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">Mapa Univali </div>
             <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action bg-light">Salas</a>
+                <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Salas</a> -->
                 <a href="#" class="list-group-item list-group-item-action bg-light">Locais Públicos</a>
                 <a href="#" class="list-group-item list-group-item-action bg-light">Banheiros</a>
                 <a href="#" class="list-group-item list-group-item-action bg-light">Blocos</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Filtro</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Filtro</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark">Blocos</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark">Blocos</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Blocos</a>
+                <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Filtro</a> -->
+                <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Filtro</a> -->
                 <div id="nightday">
                     <div class="toggleWrapper">
                         <input type="checkbox" class="dn" id="dn" />
@@ -112,367 +115,675 @@
                     'data': {
                         "features": [
                             {
-                                "type": "Feature",
-                                "properties": {
-                                    "level": 1,
-                                    "base_height": 30,
-                                    "height": 40,
-                                    "color": "grey",
-                                    "name": "porta"
-                                },
-                                "geometry": {
-                                    "coordinates": [
-                                        [
-                                            [
-                                                -48.667332,
-                                                -26.918062
+                                "features": [
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "base_height": 30,
+                                            "height": 40,
+                                            "color": "grey",
+                                            "name": "porta"
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.667332,
+                                                        -26.918062
+                                                    ],
+                                                    [
+                                                        -48.667327,
+                                                        -26.918068
+                                                    ],
+                                                    [
+                                                        -48.667405,
+                                                        -26.91812
+                                                    ],
+                                                    [
+                                                        -48.66741,
+                                                        -26.918115
+                                                    ],
+                                                    [
+                                                        -48.667332,
+                                                        -26.918062
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.667327,
-                                                -26.918068
+                                            "type": "Polygon"
+                                        },
+                                        "id": "03ce843cd35f0e3282d9b940bf4e0952"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "color": "grey",
+                                            "base_height": 0,
+                                            "height": 40,
+                                            "level": 1,
+                                            "name": "parede"
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.667837,
+                                                        -26.9184
+                                                    ],
+                                                    [
+                                                        -48.667741,
+                                                        -26.918511
+                                                    ],
+                                                    [
+                                                        -48.667733,
+                                                        -26.918504
+                                                    ],
+                                                    [
+                                                        -48.66783,
+                                                        -26.918395
+                                                    ],
+                                                    [
+                                                        -48.667837,
+                                                        -26.9184
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.667405,
-                                                -26.91812
+                                            "type": "Polygon"
+                                        },
+                                        "id": "0ed7c7e1f018eacd0875de6a9033a829"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "grey",
+                                            "base_height": "",
+                                            "height": 8
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.662932,
+                                                        -26.915132
+                                                    ],
+                                                    [
+                                                        -48.662922,
+                                                        -26.915154
+                                                    ],
+                                                    [
+                                                        -48.662875,
+                                                        -26.915143
+                                                    ],
+                                                    [
+                                                        -48.662882,
+                                                        -26.915117
+                                                    ],
+                                                    [
+                                                        -48.662887,
+                                                        -26.915118
+                                                    ],
+                                                    [
+                                                        -48.66288,
+                                                        -26.915139
+                                                    ],
+                                                    [
+                                                        -48.66292,
+                                                        -26.915148
+                                                    ],
+                                                    [
+                                                        -48.662929,
+                                                        -26.915131
+                                                    ],
+                                                    [
+                                                        -48.662932,
+                                                        -26.915132
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.66741,
-                                                -26.918115
+                                            "type": "Polygon"
+                                        },
+                                        "id": "4c29a14878c06e60cac66832176032a2"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "grey",
+                                            "base_height": 5,
+                                            "height": 8
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.662936,
+                                                        -26.915125
+                                                    ],
+                                                    [
+                                                        -48.662933,
+                                                        -26.915132
+                                                    ],
+                                                    [
+                                                        -48.662925,
+                                                        -26.915129
+                                                    ],
+                                                    [
+                                                        -48.662928,
+                                                        -26.915123
+                                                    ],
+                                                    [
+                                                        -48.662936,
+                                                        -26.915125
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.667332,
-                                                -26.918062
-                                            ]
-                                        ]
-                                    ],
-                                    "type": "Polygon"
-                                },
-                                "id": "03ce843cd35f0e3282d9b940bf4e0952"
-                            },
-                            {
-                                "type": "Feature",
-                                "properties": {
-                                    "color": "grey",
-                                    "base_height": 0,
-                                    "height": 40,
-                                    "level": 1,
-                                    "name": "parede"
-                                },
-                                "geometry": {
-                                    "coordinates": [
-                                        [
-                                            [
-                                                -48.667837,
-                                                -26.9184
+                                            "type": "Polygon"
+                                        },
+                                        "id": "58cadb936afa98590f33386823387747"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "grey",
+                                            "base_height": 0,
+                                            "height": 0
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.662793,
+                                                        -26.914894
+                                                    ],
+                                                    [
+                                                        -48.662771,
+                                                        -26.914956
+                                                    ],
+                                                    [
+                                                        -48.662723,
+                                                        -26.914945
+                                                    ],
+                                                    [
+                                                        -48.662743,
+                                                        -26.914882
+                                                    ],
+                                                    [
+                                                        -48.662793,
+                                                        -26.914894
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.667741,
-                                                -26.918511
+                                            "type": "Polygon"
+                                        },
+                                        "id": "7f06d079ba80d83839639293949b906e"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {},
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.662822,
+                                                        -26.915097
+                                                    ],
+                                                    [
+                                                        -48.66282,
+                                                        -26.915101
+                                                    ],
+                                                    [
+                                                        -48.662807,
+                                                        -26.915098
+                                                    ],
+                                                    [
+                                                        -48.662809,
+                                                        -26.915094
+                                                    ],
+                                                    [
+                                                        -48.662822,
+                                                        -26.915097
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.667733,
-                                                -26.918504
+                                            "type": "Polygon"
+                                        },
+                                        "id": "93262feae9760d1c9171f123472411c8"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "grey",
+                                            "base_height": "",
+                                            "height": 8
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.662845,
+                                                        -26.915104
+                                                    ],
+                                                    [
+                                                        -48.662844,
+                                                        -26.915108
+                                                    ],
+                                                    [
+                                                        -48.662821,
+                                                        -26.915101
+                                                    ],
+                                                    [
+                                                        -48.662822,
+                                                        -26.915097
+                                                    ],
+                                                    [
+                                                        -48.662845,
+                                                        -26.915104
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.66783,
-                                                -26.918395
+                                            "type": "Polygon"
+                                        },
+                                        "id": "95b12a9b39d2230c9c4af1db7cb415f5"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "orange",
+                                            "base_height": 5,
+                                            "height": 8
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.662855,
+                                                        -26.915105
+                                                    ],
+                                                    [
+                                                        -48.662845,
+                                                        -26.915103
+                                                    ],
+                                                    [
+                                                        -48.662845,
+                                                        -26.915108
+                                                    ],
+                                                    [
+                                                        -48.662854,
+                                                        -26.915109
+                                                    ],
+                                                    [
+                                                        -48.662855,
+                                                        -26.915105
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.667837,
-                                                -26.9184
-                                            ]
-                                        ]
-                                    ],
-                                    "type": "Polygon"
-                                },
-                                "id": "0ed7c7e1f018eacd0875de6a9033a829"
-                            },
-                            {
-                                "type": "Feature",
-                                "properties": {
-                                    "level": 1,
-                                    "color": "grey",
-                                    "base_height": 0,
-                                    "height": 0
-                                },
-                                "geometry": {
-                                    "coordinates": [
-                                        [
-                                            [
-                                                -48.662793,
-                                                -26.914894
+                                            "type": "Polygon"
+                                        },
+                                        "id": "9798ef4c71eefc8f0e5b1ba39493777f"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "grey",
+                                            "base_height": 0,
+                                            "height": 40,
+                                            "name": "parede"
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.667327,
+                                                        -26.918068
+                                                    ],
+                                                    [
+                                                        -48.667332,
+                                                        -26.918062
+                                                    ],
+                                                    [
+                                                        -48.666658,
+                                                        -26.917603
+                                                    ],
+                                                    [
+                                                        -48.666651,
+                                                        -26.917611
+                                                    ],
+                                                    [
+                                                        -48.667327,
+                                                        -26.918068
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.662771,
-                                                -26.914956
+                                            "type": "Polygon"
+                                        },
+                                        "id": "9f2b61a2c433a6e6bd60aee59813c55d"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "gray",
+                                            "base_height": 0,
+                                            "height": 8
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.662908,
+                                                        -26.915118
+                                                    ],
+                                                    [
+                                                        -48.662905,
+                                                        -26.915122
+                                                    ],
+                                                    [
+                                                        -48.662882,
+                                                        -26.915117
+                                                    ],
+                                                    [
+                                                        -48.662884,
+                                                        -26.915112
+                                                    ],
+                                                    [
+                                                        -48.662908,
+                                                        -26.915118
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.662723,
-                                                -26.914945
+                                            "type": "Polygon"
+                                        },
+                                        "id": "a561ceff7337963df04edb0331090386"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "grey",
+                                            "base_height": 0,
+                                            "height": 8
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.662872,
+                                                        -26.915109
+                                                    ],
+                                                    [
+                                                        -48.66287,
+                                                        -26.915114
+                                                    ],
+                                                    [
+                                                        -48.662854,
+                                                        -26.915109
+                                                    ],
+                                                    [
+                                                        -48.662855,
+                                                        -26.915105
+                                                    ],
+                                                    [
+                                                        -48.662872,
+                                                        -26.915109
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.662743,
-                                                -26.914882
+                                            "type": "Polygon"
+                                        },
+                                        "id": "bc8eb6a40f42a1de3d492cc9b7b23057"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "orange",
+                                            "base_height": 5,
+                                            "height": 8
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.662884,
+                                                        -26.915112
+                                                    ],
+                                                    [
+                                                        -48.662882,
+                                                        -26.915117
+                                                    ],
+                                                    [
+                                                        -48.66287,
+                                                        -26.915114
+                                                    ],
+                                                    [
+                                                        -48.662871,
+                                                        -26.91511
+                                                    ],
+                                                    [
+                                                        -48.662884,
+                                                        -26.915112
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.662793,
-                                                -26.914894
-                                            ]
-                                        ]
-                                    ],
-                                    "type": "Polygon"
-                                },
-                                "id": "7f06d079ba80d83839639293949b906e"
-                            },
-                            {
-                                "type": "Feature",
-                                "properties": {
-                                    "level": 1,
-                                    "color": "grey",
-                                    "base_height": 0,
-                                    "height": 40,
-                                    "name": "parede"
-                                },
-                                "geometry": {
-                                    "coordinates": [
-                                        [
-                                            [
-                                                -48.667327,
-                                                -26.918068
+                                            "type": "Polygon"
+                                        },
+                                        "id": "c90c326d4aaaa7a04e7e5b769eadd949"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "grey",
+                                            "base_height": ""
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.662809,
+                                                        -26.915093
+                                                    ],
+                                                    [
+                                                        -48.662808,
+                                                        -26.915098
+                                                    ],
+                                                    [
+                                                        -48.66278,
+                                                        -26.91509
+                                                    ],
+                                                    [
+                                                        -48.662781,
+                                                        -26.915085
+                                                    ],
+                                                    [
+                                                        -48.662809,
+                                                        -26.915093
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.667332,
-                                                -26.918062
+                                            "type": "Polygon"
+                                        },
+                                        "id": "d2ceac7b67f79f4d1886380626d05e0e"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "grey",
+                                            "base_height": 0,
+                                            "height": 40,
+                                            "name": "parede"
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.666651,
+                                                        -26.917612
+                                                    ],
+                                                    [
+                                                        -48.666569,
+                                                        -26.917707
+                                                    ],
+                                                    [
+                                                        -48.666579,
+                                                        -26.917712
+                                                    ],
+                                                    [
+                                                        -48.666661,
+                                                        -26.917618
+                                                    ],
+                                                    [
+                                                        -48.666651,
+                                                        -26.917612
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.666658,
-                                                -26.917603
+                                            "type": "Polygon"
+                                        },
+                                        "id": "d5925adcc56d303b75a028b900c83ccb"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "orange",
+                                            "height": 0,
+                                            "base_height": 0
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.667823,
+                                                        -26.918403
+                                                    ],
+                                                    [
+                                                        -48.667742,
+                                                        -26.918494
+                                                    ],
+                                                    [
+                                                        -48.666589,
+                                                        -26.917701
+                                                    ],
+                                                    [
+                                                        -48.666662,
+                                                        -26.917618
+                                                    ],
+                                                    [
+                                                        -48.667823,
+                                                        -26.918403
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.666651,
-                                                -26.917611
+                                            "type": "Polygon"
+                                        },
+                                        "id": "daeb7fd911eda3752b2144ffced928fe"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "name": "parede",
+                                            "height": 40,
+                                            "base_height": 0,
+                                            "color": "grey"
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.66741,
+                                                        -26.918115
+                                                    ],
+                                                    [
+                                                        -48.667406,
+                                                        -26.91812
+                                                    ],
+                                                    [
+                                                        -48.667823,
+                                                        -26.918403
+                                                    ],
+                                                    [
+                                                        -48.66783,
+                                                        -26.918396
+                                                    ],
+                                                    [
+                                                        -48.66741,
+                                                        -26.918115
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.667327,
-                                                -26.918068
-                                            ]
-                                        ]
-                                    ],
-                                    "type": "Polygon"
-                                },
-                                "id": "9f2b61a2c433a6e6bd60aee59813c55d"
-                            },
-                            {
-                                "type": "Feature",
-                                "properties": {
-                                    "level": 1,
-                                    "color": "orange",
-                                    "height": 40,
-                                    "base_height": 30
-                                },
-                                "geometry": {
-                                    "coordinates": [
-                                        [
-                                            [
-                                                -48.662972,
-                                                -26.91501
+                                            "type": "Polygon"
+                                        },
+                                        "id": "f40c5a83d589f21b958ca84bb69fc7ab"
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "properties": {
+                                            "level": 1,
+                                            "color": "orange",
+                                            "base_height": 5,
+                                            "height": 8
+                                        },
+                                        "geometry": {
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        -48.662928,
+                                                        -26.915123
+                                                    ],
+                                                    [
+                                                        -48.662925,
+                                                        -26.915129
+                                                    ],
+                                                    [
+                                                        -48.662905,
+                                                        -26.915122
+                                                    ],
+                                                    [
+                                                        -48.662907,
+                                                        -26.915118
+                                                    ],
+                                                    [
+                                                        -48.662928,
+                                                        -26.915123
+                                                    ]
+                                                ]
                                             ],
-                                            [
-                                                -48.662968,
-                                                -26.915009
-                                            ],
-                                            [
-                                                -48.662932,
-                                                -26.915125
-                                            ],
-                                            [
-                                                -48.662937,
-                                                -26.915126
-                                            ],
-                                            [
-                                                -48.662972,
-                                                -26.91501
-                                            ]
-                                        ]
-                                    ],
-                                    "type": "Polygon"
-                                },
-                                "id": "bc72b3de881876cd1c980c656992d955"
-                            },
-                            {
-                                "type": "Feature",
-                                "properties": {
-                                    "level": 1,
-                                    "color": "grey",
-                                    "base_height": 0,
-                                    "height": 40,
-                                    "name": "parede"
-                                },
-                                "geometry": {
-                                    "coordinates": [
-                                        [
-                                            [
-                                                -48.666651,
-                                                -26.917612
-                                            ],
-                                            [
-                                                -48.666569,
-                                                -26.917707
-                                            ],
-                                            [
-                                                -48.666579,
-                                                -26.917712
-                                            ],
-                                            [
-                                                -48.666661,
-                                                -26.917618
-                                            ],
-                                            [
-                                                -48.666651,
-                                                -26.917612
-                                            ]
-                                        ]
-                                    ],
-                                    "type": "Polygon"
-                                },
-                                "id": "d5925adcc56d303b75a028b900c83ccb"
-                            },
-                            {
-                                "type": "Feature",
-                                "properties": {
-                                    "level": 1,
-                                    "color": "orange",
-                                    "height": 0,
-                                    "base_height": 0
-                                },
-                                "geometry": {
-                                    "coordinates": [
-                                        [
-                                            [
-                                                -48.667823,
-                                                -26.918403
-                                            ],
-                                            [
-                                                -48.667742,
-                                                -26.918494
-                                            ],
-                                            [
-                                                -48.666589,
-                                                -26.917701
-                                            ],
-                                            [
-                                                -48.666662,
-                                                -26.917618
-                                            ],
-                                            [
-                                                -48.667823,
-                                                -26.918403
-                                            ]
-                                        ]
-                                    ],
-                                    "type": "Polygon"
-                                },
-                                "id": "daeb7fd911eda3752b2144ffced928fe"
-                            },
-                            {
-                                "type": "Feature",
-                                "properties": {
-                                    "level": 1,
-                                    "height": 40,
-                                    "base_height": 30,
-                                    "name": "corredor_aberto"
-                                },
-                                "geometry": {
-                                    "coordinates": [
-                                        [
-                                            [
-                                                -48.661727,
-                                                -26.914702
-                                            ],
-                                            [
-                                                -48.661726,
-                                                -26.914706
-                                            ],
-                                            [
-                                                -48.662972,
-                                                -26.91501
-                                            ],
-                                            [
-                                                -48.662973,
-                                                -26.915005
-                                            ],
-                                            [
-                                                -48.661727,
-                                                -26.914702
-                                            ]
-                                        ]
-                                    ],
-                                    "type": "Polygon"
-                                },
-                                "id": "f28987b0d434a733f043400523378e8d"
-                            },
-                            {
-                                "type": "Feature",
-                                "properties": {
-                                    "level": 1,
-                                    "name": "parede",
-                                    "height": 40,
-                                    "base_height": 0,
-                                    "color": "grey"
-                                },
-                                "geometry": {
-                                    "coordinates": [
-                                        [
-                                            [
-                                                -48.66741,
-                                                -26.918115
-                                            ],
-                                            [
-                                                -48.667406,
-                                                -26.91812
-                                            ],
-                                            [
-                                                -48.667823,
-                                                -26.918403
-                                            ],
-                                            [
-                                                -48.66783,
-                                                -26.918396
-                                            ],
-                                            [
-                                                -48.66741,
-                                                -26.918115
-                                            ]
-                                        ]
-                                    ],
-                                    "type": "Polygon"
-                                },
-                                "id": "f40c5a83d589f21b958ca84bb69fc7ab"
+                                            "type": "Polygon"
+                                        },
+                                        "id": "ffb30e1a8e8070ac7f5478016e749295"
+                                    }
+                                ],
+                                "type": "FeatureCollection"
                             }
-                        ],
-                        "type": "FeatureCollection"
-                    }
 
 
                     // 'data': 'http://localhost/mapaUnivali/indoor-3d-map_teste.geojson'
                 },
-                'paint': {
-                    // See the Mapbox Style Specification for details on data expressions.
-                    // https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions
+                    'paint': {
+                        // See the Mapbox Style Specification for details on data expressions.
+                        // https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions
 
-                    // Get the fill-extrusion-color from the source 'color' property.
-                    'fill-extrusion-color': ['get', 'color'],
+                        // Get the fill-extrusion-color from the source 'color' property.
+                        'fill-extrusion-color': ['get', 'color'],
 
-                    // Get fill-extrusion-height from the source 'height' property.
-                    'fill-extrusion-height': ['get', 'height'],
+                        // Get fill-extrusion-height from the source 'height' property.
+                        'fill-extrusion-height': ['get', 'height'],
 
-                    // Get fill-extrusion-base from the source 'base_height' property.
-                    'fill-extrusion-base': ['get', 'base_height'],
+                        // Get fill-extrusion-base from the source 'base_height' property.
+                        'fill-extrusion-base': ['get', 'base_height'],
 
-                    // Make extrusions slightly opaque for see through indoor walls.
-                    'fill-extrusion-opacity': 0.5
-                }
-            });
+                        // Make extrusions slightly opaque for see through indoor walls.
+                        'fill-extrusion-opacity': 0.5
+                    }
+                });
             map.addSource('some id', {
                 type: 'geojson',
                 data: {
