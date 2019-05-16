@@ -1,9 +1,9 @@
 function darkness() {
     let map = document.getElementById("map");
-    if (map.classList == "darkmap") {
-        map.classList = "whitemap";
+    if (map.classList == "darkmap mapboxgl-map") {
+        map.classList = "whitemap mapboxgl-map";
     } else {
-        map.classList = "darkmap";
+        map.classList = "darkmap mapboxgl-map";
     }
 }
 
@@ -28,3 +28,23 @@ enableHighAccuracy: true
 },
 trackUserLocation: true
 }));
+
+// var blocos =  document.getElementById('blocos');
+var mostrandoBlocos = 0;
+
+$("#blocos").click(function(){
+    if(mostrandoBlocos==0){
+        mostrandoBlocos = 1;
+        $(".bloco").css("display","block")
+    }else{
+        mostrandoBlocos = 0;
+        $(".bloco").css("display","none");
+    }
+})
+
+// blocos.onClick = function(){
+
+// 	if(){
+
+//     }
+// }
