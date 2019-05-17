@@ -10,8 +10,8 @@
     <!-- Bootstrap core CSS -->
     <link href="src/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
     <link href="src/main.css" rel="stylesheet">
 
     <link href="src/am.css" rel="stylesheet">
@@ -37,18 +37,18 @@
 
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Mapa Univali </div>
+            <div class="sidebar-heading text-light bg-primary" >Mapa Univali </div>
             <div class="list-group list-group-flush">
                 <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Salas</a> -->
-                <a href="#" class="list-group-item list-group-item-action bg-primary text-light"
+                <a href="#" id="publicPoints" class="list-group-item list-group-item-action bg-light text-dark"
                     onclick="showPublicPoints()">Locais Públicos</a>
-                <a href="#" class="list-group-item list-group-item-action bg-primary text-light"
+                <a href="#" id="toiletPoints" class="list-group-item list-group-item-action bg-light text-dark"
                     onclick="showToiletsPoints()">Banheiros</a>
-                <a href="#" class="list-group-item list-group-item-action bg-primary text-light"
+                <a href="#" id="cafePoints" class="list-group-item list-group-item-action bg-light text-dark"
                     onclick="showCafePoints()">Lanchonetes</a>
-                <a href="#" id="blocos" class="list-group-item list-group-item-action bg-primary text-light">Blocos</a>
+                <a href="#" id="blocos" class="list-group-item list-group-item-action bg-info text-light">Blocos</a>
                 <a href="#" class="bloco list-group-item list-group-item-action bg-light" style="display:none">A</a>
-                <a href="#" class="bloco list-group-item list-group-item-action bg-light" style="display:none"
+                <a href="#" id="b6Points" class="bloco list-group-item list-group-item-action bg-light" style="display:none"
                     onclick="showB6()">B</a>
                 <a href="#" class="bloco list-group-item list-group-item-action bg-light" style="display:none">C</a>
                 <a href="#" class="bloco list-group-item list-group-item-action bg-light" style="display:none">D</a>
@@ -109,8 +109,9 @@
             style: 'mapbox://styles/dcaueb78/cjt0xceht0e7m1fl2xz9qiuo3',
             // style: 'mapbox://styles/dcaueb78/cjv8pxgec06ol1fqv835ao7ck', versão dark
 
-            center: [-48.665681, -26.917887],
-            zoom: 16.3
+            center: [-48.663420, -26.915505],
+            zoom: 16.13,
+            bearing: 54.04
         });
 
         map.on('load', function () {
@@ -2446,7 +2447,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="src/jquery/jquery.js"></script>
     <script src="src/bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="src/tourBootstrap/js/bootstrap-tour-standalone.min.js"></script>
+    <script src="src/tourBootstrap/js/bootstrap-tour-standalone.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>

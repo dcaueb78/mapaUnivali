@@ -15,8 +15,8 @@ function darkness() {
 }
 
 function showPublicPoints() {
-    if (publicPoints == false) {
 
+    if (publicPoints == false) {
         var elemento = document.createElement('div')
         elemento.className = 'marker-rounded biblioteca';
         var popup = new mapboxgl.Popup({ offset: 25 })
@@ -25,8 +25,6 @@ function showPublicPoints() {
             .setLngLat([-48.6628, -26.9147])
             .setPopup(popup) // sets a popup on this marker
             .addTo(map)
-
-
         elemento = document.createElement('div')
         elemento.className = 'marker-rounded teatroAdelaideKonder';
         var popup = new mapboxgl.Popup({ offset: 25 })
@@ -35,12 +33,15 @@ function showPublicPoints() {
             .setLngLat([-48.6632, -26.9152])
             .setPopup(popup)
             .addTo(map)
-
         publicPoints = true;
+        var button = document.getElementById('publicPoints');
+        button.classList = "list-group-item list-group-item-action bg-primary text-light";
     } else {
         $('.biblioteca').hide();
         $('.teatroAdelaideKonder').hide();
         publicPoints = false;
+        button = document.getElementById('publicPoints');
+        button.classList = "list-group-item list-group-item-action bg-light text-dark";
     }
 }
 
@@ -58,7 +59,11 @@ function showToiletsPoints() {
             .addTo(map)
 
         toiletPoints = true;
+        var button = document.getElementById('toiletPoints');
+        button.classList = "list-group-item list-group-item-action bg-primary text-light";
     } else {
+        button = document.getElementById('toiletPoints');
+        button.classList = "list-group-item list-group-item-action bg-light text-dark";
         $('.toilet').hide();
         toiletPoints = false;
     }
@@ -77,11 +82,14 @@ function showCafePoints() {
             .setLngLat([-48.6634, -26.9153])
             .setPopup(popup) // sets a popup on this marker
             .addTo(map)
-
+        var button = document.getElementById('cafePoints');
+        button.classList = "list-group-item list-group-item-action bg-primary text-light";
         cafePoints = true;
     } else {
         $('.cafe').hide();
-        publicPoints = false;
+        cafePoints = false;
+        button = document.getElementById('cafePoints');
+        button.classList = "list-group-item list-group-item-action bg-light text-dark";
     }
 }
 
@@ -108,11 +116,14 @@ function showB6() {
             .setLngLat([-48.6626, -26.9150])
             .setPopup(popup) // sets a popup on this marker
             .addTo(map)
-
+        var button = document.getElementById('b6Points');
+        button.classList = "bloco list-group-item list-group-item-action bg-primary text-light";
         b6 = true;
     } else {
         $('.marker').hide();
         b6 = false;
+        button = document.getElementById('b6Points');
+        button.classList = "bloco list-group-item list-group-item-action bg-light text-dark";
     }
 }
 
@@ -163,13 +174,13 @@ var tour = new Tour({
         },
         {
             element: ".mapboxgl-ctrl-fullscreen",
-            title: "Localização",
+            title: "Tela Cheia",
             content: "Clique aqui para deixar em tela cheia."
         },
         {
             element: ".mapboxgl-ctrl-geolocate",
             title: "Localização",
-            content: "Clique aqui para ativar a sua localização em tempo real. Botão também utilizado para câmera voltar a sua posição em tempo real."
+            content: "Clique aqui para ativar a sua localização em tempo real ou para a câmera voltar a sua posição em tempo real."
         }
 
 

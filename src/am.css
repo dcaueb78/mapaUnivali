@@ -37,6 +37,7 @@ menuDiv{
   left: -50px;
   top: 15px;
   font-size: 18px;
+  color:rgba(32, 135, 245, 0.94)
 }
 .toggle:after {
   content: 'PM';
@@ -44,7 +45,7 @@ menuDiv{
   right: -48px;
   top: 15px;
   font-size: 18px;
-  color: #749ED7;
+  color: black;
 }
 
 .toggle__handler {
@@ -156,10 +157,10 @@ input:checked + .toggle {
   background-color: #749DD6;
 }
 input:checked + .toggle:before {
-  color: #749ED7;
+  color: black;
 }
 input:checked + .toggle:after {
-  color: #ffffff;
+  color: rgba(32, 135, 245, 0.94)
 }
 input:checked + .toggle .toggle__handler {
   background-color: #FFE5B5;
